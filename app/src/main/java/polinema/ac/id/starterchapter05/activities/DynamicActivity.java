@@ -33,6 +33,4 @@ public class DynamicActivity extends AppCompatActivity {
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
-
-
 }
