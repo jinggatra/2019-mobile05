@@ -10,43 +10,56 @@
         android:id="@+id/btn_load_red_fragment"
         android:layout_width="180dp"
         android:layout_height="42dp"
-        android:layout_marginStart="16dp"
+        android:onClick="handlerClickLoadRedFragment"
         android:text="Load Red Fragment"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.615"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023"
-        android:onClick="handlerClickLoadRedFragment"
-        />
+        app:layout_constraintVertical_bias="0.023" />
 
     <Button
         android:id="@+id/btn_load_blue_fragment"
         android:layout_width="180dp"
         android:layout_height="42dp"
+        android:onClick="handlerClickLoadBlueFragment"
         android:text="Load Blue Fragment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_load_red_fragment"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023"
-        android:onClick="handlerClickLoadBlueFragment"
-        />
+        app:layout_constraintVertical_bias="0.023" />
 
     <FrameLayout
         android:id="@+id/dynamic_fragment_placeholder"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@id/btn_load_red_fragment"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_load_red_fragment"
+        >
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/dynamic_fragment_placeholder2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_load_blue_fragment"
         >
     </FrameLayout>
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5"
-        />
+        app:layout_constraintGuide_percent="0.5"></androidx.constraintlayout.widget.Guideline>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
